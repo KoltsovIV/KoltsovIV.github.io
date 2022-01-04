@@ -1,0 +1,53 @@
+.footer
+    padding: 20px 0
+    margin-top: 20px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    border-top: 1px solid #e1e4e7
+    color: #3c3c3c
+    font-size: 15px
+    a
+        color: $main_color
+    &__info
+        font-weight: 300
+        display: flex
+        justify-content: center
+        align-items: center
+        p
+            margin: 0     
+    &__border
+        margin: 0 10px
+        height: 20px
+        width: 2px
+        background-color: #e1e4e7
+    &__socials
+        ul
+            font-size: 20px
+            display: flex
+            margin: 0
+            padding: 0
+            li
+                list-style-type: none
+                margin-right: 10px
+                a
+                    text-decoration: none
+                &:last-child
+                    margin-right: 0
+
+@media ( max-width: 899.5px )
+    .footer
+        flex-direction: column
+        align-items: center
+        &__info
+            flex-direction: column
+            & p:nth-child(n+2)
+                margin-top: 10px
+        & div:nth-child(n+1)
+            margin-top: 10px
+        &__info
+            order: 999
+        &__border
+            display: none
+            
+    

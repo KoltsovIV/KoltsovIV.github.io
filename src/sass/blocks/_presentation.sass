@@ -1,0 +1,44 @@
+.presentation
+    margin-top: 48px
+    &__text
+        margin: 20px 0 0 0
+        color: rgba(17,23,29,.6)
+        font-size: 26px
+        text-align: center
+    &__container
+        margin: 20px 0
+        padding: 0  
+        display: grid
+        grid-template-columns: repeat(auto-fill, $grid-item_width)
+        grid-auto-rows: $grid-item_row_increment
+        justify-content: space-around
+        .item
+            padding: 0
+            margin: 15px 10px
+            background-color: #fff
+            border-radius: 10px
+            &_small 
+                grid-row-end: span $grid-item_small
+            &_medium 
+                grid-row-end: span $grid-item_medium
+            &_large 
+                grid-row-end: span $grid-item_large
+    &__btn
+        margin: 0
+        padding: 0
+        border: none
+    &__img
+        width: 100%
+        border-radius: 10px
+
+@media ( max-width: 1199.5px )
+    .presentation
+        grid-template-columns: repeat(4, 1fr)
+
+@media ( max-width: 991.5px )
+    .presentation
+        grid-template-columns: repeat(3, 1fr)
+
+@media ( max-width: 575.5px )
+    .presentation
+        grid-template-columns: repeat(2, 1fr)    
